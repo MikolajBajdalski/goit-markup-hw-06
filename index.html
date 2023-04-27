@@ -71,8 +71,8 @@
         </div>
       </div>
 
-
-      <div class="backdrop " data-modal>
+ <!-- is-hidden do backdrop-->
+      <div class="backdrop " data-modal> 
         <div class="modal">
           <div class="container-button-modal">
             <button data-modal-close class="close-button-modal" type="button">
@@ -119,7 +119,13 @@
               </div> 
               <div class="accept-the-terms">
               <label class="statute" for="statute">
-                <input type="checkbox" name="statute" id="statute">
+                <input class="checkbox-modal-input" type="checkbox" name="statute" id="statute">
+                <svg class="checkbox-border" width="16px" height="15px">
+                  <use href="./images/icons.svg#icon-Vectorborder-checkbox"></use>
+                </svg>
+                <svg class="checkbox-checkmark" width="11px" height="8px">
+                  <use href="./images/icons.svg#icon-Vectorcheckbox-2-1"></use>
+                </svg>
                 <p>Oświadczam iż akceptuję <a href="#">Regulamin</a> i <a href="$">Politykę Prywatności.</a></p>
               </label>
             </div>

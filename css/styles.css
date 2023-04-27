@@ -698,6 +698,9 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
+  transition: border fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-form-modal:focus-within {
@@ -730,11 +733,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.statute .checkbox-modal-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .statute p {
   font-size: 14px;
-  margin-left: 7px;
+  margin-left: 25px;
 }
 .statute p a {
   color: var(--color-text-hover);
@@ -758,6 +768,31 @@ body {
   font-weight: 700;
   line-height: 1.875;
   letter-spacing: 0.06em;
+}
+
+.checkbox-border {
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.checkbox-checkmark {
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  transition: background-color fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-modal-input:checked + .checkbox-checkmark {
+  display: block;
+}
+
+.checkbox-modal-input:checked + .checkbox-border {
+  background-color: var(--color-text-hover);
+  fill: var(--color-text-hover);
 }
 
 /* modal end */
