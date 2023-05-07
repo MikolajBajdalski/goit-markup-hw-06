@@ -682,6 +682,9 @@ body {
   border-radius: 4px;
   display: flex;
   align-items: center;
+  transition: border, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .name-form-modal-svg {
@@ -698,9 +701,6 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  transition: border fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-form-modal:focus-within {
@@ -768,6 +768,7 @@ body {
   font-weight: 700;
   line-height: 1.875;
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
 
 .checkbox-border {
@@ -781,7 +782,7 @@ body {
   position: absolute;
   top: 3px;
   left: 2px;
-  transition: background-color fill;
+  transition: background-color, fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
